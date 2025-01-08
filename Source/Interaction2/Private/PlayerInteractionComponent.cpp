@@ -3,8 +3,6 @@
 
 #include "PlayerInteractionComponent.h"
 
-#include <ThirdParty/nanosvg/src/nanosvg.h>
-
 #include "InteractionComponet.h"
 
 void UPlayerInteractionComponent::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,

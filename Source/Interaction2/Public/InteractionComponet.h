@@ -6,6 +6,7 @@
 #include "Components/ActorComponent.h"
 #include "InteractionComponet.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FBasicInteractionDelegate);
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class INTERACTION2_API UInteractionComponet : public UActorComponent
@@ -29,6 +30,9 @@ public:
 	                           FActorComponentTickFunction* ThisTickFunction) override;
 
 	FString GetInteractionLabel() const;
+
+	UPROPERTY(BlueprintAssignable)
+	FBasicInteractionDelegate OnIneractionDelegate;
 
 	void Interact();
 

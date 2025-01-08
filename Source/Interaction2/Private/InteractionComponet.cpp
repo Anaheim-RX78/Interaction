@@ -42,6 +42,7 @@ void UInteractionComponet::Interact()
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Interact"));
 	OnInteract(0);
 	OnInteractionStart();
+	OnIneractionDelegate.Broadcast();
 }
 
 void UInteractionComponet::OnInteractionStart()
